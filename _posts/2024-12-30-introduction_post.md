@@ -12,4 +12,4 @@ I have set out to try and publish some of my work and my interests in the realm 
 
 Through my daily work I perform penetration tests of Windows clients as well as environments, and as such most of the topics posted on the blog will be centered around offensive Windows work. I plan to submit **technical details of CVEs, book and content reviews as well as miscellaneous topics**.** 
 
-- BirkeP
+-> BirkeP
