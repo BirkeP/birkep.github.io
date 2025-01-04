@@ -3,7 +3,7 @@ title: Incident Reponse for Windows - Book review
 categories: [Book review]
 tags: [Windows, book reviews, IR]    
 image:
-    path: /assets/img/unavngivet.png
+    path: /assets/img/Unavngivet.png
 ---
 
 <div class="star-rating">
