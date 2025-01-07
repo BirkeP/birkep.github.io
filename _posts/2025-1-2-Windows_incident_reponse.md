@@ -14,19 +14,19 @@ Red and blue teaming are just two sides of the same coin, and as such I still tr
 
 The books table of content lists as follows:
 ```
--Introduction to the Threat Landscape
--Understanding the Attack Life Cycle
--Phases of an Efficient Incident Response on Windows Infrastructure
--Endpoint Forensic Evidence Collection
--Gaining Access to the Network
--Establishing a Foothold
--Network and Key Assets Discovery
--Network Propagation
--Data Collection and Exfiltration
--Impact
--Threat Hunting and Analysis of TTPs
--Incident Containment, Eradication, and Recovery
--Incident Investigation Closure and Reporting
+Introduction to the Threat Landscape
+Understanding the Attack Life Cycle
+Phases of an Efficient Incident Response on Windows Infrastructure
+Endpoint Forensic Evidence Collection
+Gaining Access to the Network
+Establishing a Foothold
+Network and Key Assets Discovery
+Network Propagation
+Data Collection and Exfiltration
+Impact
+Threat Hunting and Analysis of TTPs
+Incident Containment, Eradication, and Recovery
+Incident Investigation Closure and Reporting
 ``` 
 
 I feel that the book achieves what is sets out to deliver on, with an information rich and structured approach to describing the modern Incident Reponse work through a hollistic lense. The authors are both well versed in the field and it comes to show with this book. I can highly recommend it as a read to anynone seeking to get into Incident reponse, junior technicians in the field as well as for people in management roles. 
