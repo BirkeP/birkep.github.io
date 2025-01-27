@@ -1,7 +1,9 @@
 ---
-title: CVE-2025-21293 (Windows Local Privilege Escalation)
+title: Active Directory Domain Services Elevation of Privilege Vulnerability (CVE-2025-21293)
 categories: [CVE, Windows]
 tags: [CVE, LPE, Windows, CVE-2025-21293]    
+image:
+    path: /assets/img/CVE1.png
 ---
 
 # Introduction 
@@ -33,7 +35,7 @@ Now that only becomes interesting once the next part of the puzzle is introduced
 
 ## Weaponizing Performance Counters
 
-On a high level the Performance Counters function retrieve and process data from services and applications on the system through a consumers such as PerfMon.exe or WMI in our example. For us it means being able to run code on the system and in the security context of the WMI service (NT\SYSTEM). But first let us break down how we register the Performance Counter. 
+On a high level the Performance Counters function retrieve and process data from services and applications on the system through a [Performance counter consumers](https://learn.microsoft.com/en-us/windows/win32/perfctrs/using-performance-counters) such as PerfMon.exe or WMI in our example. For us it means being able to run code on the system and in the security context of the WMI service (NT\SYSTEM). But first let us break down how we register the Performance Counter. 
 
 [OpenPerformanceData Documentation](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/legacy/aa372200(v=vs.85))
 
@@ -243,4 +245,6 @@ From the screenshot, it is cleat that the malicious DLL was executed and in SYST
 
 
 ## Final thoughts 
+This side mission was as unexpected as it was fun and a great learning experience. It has definitely motivated me to seek more deep learning and research in Windows internals even more. With the January security update this particular path has been patched, it seems now the “CreateSubKey” right is now no longer accompanied by the “Set value” right, that allowed to change the keys name to “Performance”, the initial primer for exploitation. I will try to dig more into the Registry Database and it's security implications as viewed from the usersland. 
 
+- BirkeP
