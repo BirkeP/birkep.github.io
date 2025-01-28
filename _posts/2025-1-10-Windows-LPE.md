@@ -9,7 +9,7 @@ image:
 # Introduction 
 
 In September of 2024 while on a customer assigment I encountered the "Network Configuration Operators" group, a so called builtin group of Active Directory (default). 
-As I had never heard of or encountered this group membership before, it sprung to eye immediately. Initially I tried to look up if it had any security implications, like its more known colleagues DNS Admins and Backup Operators, but to no avail. Surpisingly little came up about the group but I couldn't help myself from probing further. This led me down the rabbithole of Registry Database access control lists and possibilities of weaponization, culminating with the discovery of CVE-2025-21293. Before we move along to the body of work, I have to give out a special thanks to Clément Labro, who initially did the heavy lifting of finding a way to weaponize performancecounters. (This will hopefully make more sense by the end of the article) and my colleagues at ReTest Security ApS, who have provided me with knowledge in the field and the oppertunity to put it to use.
+As I had never heard of or encountered this group membership before, it sprung to eye immediately. Initially I tried to look up if it had any security implications, like its more known colleagues DNS Admins and Backup Operators, but to no avail. Surpisingly little came up about the group but I couldn't help myself from probing further. This led me down the rabbithole of Registry Database access control lists and possibilities of weaponization, culminating with the discovery of [https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-21293](CVE-2025-21293). Before we move along to the body of work, I have to give out a special thanks to Clément Labro, who initially did the heavy lifting of finding a way to weaponize performancecounters. (This will hopefully make more sense by the end of the article) and my colleagues at ReTest Security ApS, who have provided me with knowledge in the field and the oppertunity to put it to use.
 
 # Body of work
 
@@ -240,7 +240,7 @@ The current users security context is the one executing Perfmon.exe and therefor
 Now, weaponizing the Performance Counter in this case relies on querying the Performance Counters with WMI as a the Consumer, 
 ![WMI as Consumer](/assets/img/20241003111646.png)
 
-From the screenshot, it is cleat that the malicious DLL was executed and in SYSTEM\ security context. This is the final proof in this blog, that cements successfully breaking system integrity under the conditions now fixed in the "Network Configuration Operators" group as of the 14th of January 2025 by introduction of KB package 
+From the screenshot, it is cleat that the malicious DLL was executed and in SYSTEM\ security context. This is the final proof in this blog, that cements successfully breaking system integrity under the conditions now fixed in the "Network Configuration Operators" group as of the 14th of January 2025 by introduction of the January security update.
 ![Execution logged2](/assets/img/20241003111647.png)
 
 
